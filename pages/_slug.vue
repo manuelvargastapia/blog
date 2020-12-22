@@ -1,13 +1,14 @@
 <template>
-  <article>
-    <nuxt-content :document="article" />
-  </article>
+  <nuxt-content :document="article" />
 </template>
 
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const article = await $content('blog', params.slug).fetch()
+    const articlePath = `/${params.slug}`
+    const [article] = await $content({ deep: true })
+      .where({ dir: articlePath })
+      .fetch()
     return { article }
   },
 }

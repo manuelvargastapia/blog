@@ -1,11 +1,10 @@
 ---
 title: Primera app Flutter
 description: Revisión del proceso de desarrollo de una primera experiencia con Flutter.
-slug: primera-app-flutter
-img: logo.png
+featured: featured.png
 ---
 
-# LibGen Mobile
+# Primera app Flutter: LibGen Mobile
 
 He desarrollado mi primera aplicación móvil completa (como proyecto propio al menos) y quisiera compartir aquí algunos pensamientos al respecto. Concretamente, en cuanto a mis motivaciones, la planificación del proyecto, las dificultades y aprendizajes obtenidos. La aplicación en cuestión es un cliente móvil para Library Genesis, el conocido y nunca bien ponderado servicio de descarga gratuita de libros, artículos científicos y otros tipos de contenidos bibliográfico. La herramienta escogida para su construcción es Flutter, el nunca bien ponderado SDK multiplataforma para desarrollo nativo.
 
@@ -21,9 +20,9 @@ No pretendo crear un tutorial detallado, sino más bien describir brevemente el 
 
 Finalmente, aclarar también que la app sólo está disponible en Android. Aún no se ha publicado oficialmente, pero es cuestión de tiempo para que se agregue a FDroid y quizá también a Play Store. Sin embargo, esto podría no ser posible o conveniente debido a la naturaleza del proyecto. La API, por su parte, se ejecuta en [Heroku](https://dashboard.heroku.com).
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608426975.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608426975.png)
+<article-img src="/primera-app-fluter/images/home_light.png" alt="Home Light"></article-img>
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608426982.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608426982.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608426982.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608426982.png)
 
 ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608427039.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608427039.png)
 
@@ -31,7 +30,7 @@ Finalmente, aclarar también que la app sólo está disponible en Android. Aún 
 
 ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608427057.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608427057.png)
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608427060.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608427060.png)
+![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608427060.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608427060.png) -->
 
 MOTIVACIONES
 
@@ -57,7 +56,7 @@ Sin entrar en mayor detalle, esta es la apariencia general del proyecto, despué
 
 Los _scripts_ del _package.json_ quedaron así:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled.png) -->
 
 - `npm start` ejecutará el archivo _src/app/api.ts_ sin compilar, y usando [nodemon](https://www.npmjs.com/package/nodemon), es posible hacer _live reload_, para editar sin tener que reiniciar la ejecución
 - `npm run serve` realiza la misma acción, pero compilando previamente el proyecto (sin el _live reload_)
@@ -73,12 +72,12 @@ Siguiendo con los scripts, aún queda explicar el comando `DEBUG=express,libgen,
 
 Siguiendo con el _package.json_, estas son algunas de las dependencias que utilicé:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%201.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%201.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%201.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%201.png) -->
 
 - [@hapi/joi](https://www.npmjs.com/package/joi) es una librería muy interesante que facilita enormemente el trabajo de validar los _query params_ de los endpoints. Usarlo con Typescript resultó en un arma de doble filo, ya que si bien refuerza la estabilidad del código gracias al tipado, también trajo inconvenientes al no tener documentación sobre cómo implementar ciertas funcionalidades, tales como el manejo de errores con la función que dispone ExpressJS. No obstante, al final son más los beneficios, ya que las validaciones funcionan estupendamente y son muy flexibles. Se usa en conjunto con [express-joi-validation](https://www.npmjs.com/package/express-joi-validation).
 - [jsdom](https://www.npmjs.com/package/jsdom) y [node-fetch](https://www.npmjs.com/package/node-fetch) son usadas para el web scrapping y así obtener un link de descarga directo de los libros. Si bien la librería base que utilicé puede generar un link de descarga, mi intención era que esta se realizará con un click en la app. Por eso, necesitaba obtener el link asociado al botón de descarga en LibGen.
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%202.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%202.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%202.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%202.png) -->
 
 En un inicio, obtenía sólo el link en el botón "GET". Pero después me percaté de que habían agregado algunas otras opciones. Gracias a ello, las descargas desde la app toman uno o dos segundos, ya que el servidor de Cloudflare, por ejemplo, es muy rápido.
 
@@ -104,11 +103,11 @@ En el mismo tablero agrewgaba también tareas en el _backend._ Tratando de mante
 
 En general, logré llevar un muy buen ritmo, pero hacia el final de la "iteración", cuando tocaba realizar los toques finales para tener algo digno que mostrar (o algo así, claramente la app la UI no es la mejor, se nota que no consideré un diseño previo antes de programar, lo cual es lo que peor que alguien sin sentido estético puede hacer), ocurrió lo que me temía, y me pasé al menos dos semanas sólo resolviendo pequeños bugs y corriendo la UI, a veces estancado por días. Mi lista de tareas sólo para ese proceso se ve así:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%203.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%203.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%203.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%203.png) -->
 
 Este era sólo un punto en el backlog. Faltan además todos los TODOs en el código como tal, que creció como una lista independiente de mi Kanban en Notion, dentro de un archivo en el proyecto (lamento el zoom):
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%204.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%204.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%204.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%204.png) -->
 
 Pese a todo, logré retomar las riendas y llevar la app a su estado final, lista para pasar al _deploy_ en FDroid (el proceso de liberación como tal merece un artículo aparte, en formato de tutorial, debido a su complejidad y a que hay poca información en general, sobre todo para Flutter).
 
@@ -122,13 +121,13 @@ Tratando de seguir el ejemplo del libro y guiándome por tutoriales, traté de i
 
 Los blocs de la aplicación son bastante genéricos. Uno de ellos se encarga de las búsquedas. Su método `mapEventToState()` luce así:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%205.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%205.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%205.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%205.png) -->
 
 Maneja un único evento (buscar), emite un estado de carga con una _flag_ para indicar si se requiere limpiar la búsqueda, y valida si hay más resultados que mostrar. En caso de que no, usa el repositorio para obtener los libros de acuerdo al texto y los filtros definidos en el flujo de _showSearch()_ en la UI.
 
 El bloc de descargas es un poco más complejo, ya que alberga todo el _boilerplate_ requerido por _flutter_downloader_. Pero su `mapEventToState()` se ve así:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%206.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%206.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%206.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%206.png) -->
 
 También considera un único evento (descargar) y tiene un repositorio asociado (que no es más que un contenedor para los métodos de la instancia de flutter_downloader). Notar el estado `DownloadPermissionsPermanentlyDenied`. Su rol es indicar a la UI que el usuario ha negado los permisos y se requiere acceder a los Ajustes del dispositivo para volver a activarlos. Curiosamente, en algunos casos (en mi caso particular, con un Android 9), puede ocurrir que los permisos al momento de abrir la app ya estén denegados.
 
@@ -136,13 +135,13 @@ Si los permisos fueron entregados, la descarga inicia. Primero, se obtiene el li
 
 El 3er bloc que hay es el de [Hive](https://pub.dev/packages/hive). Hive es una base de datos local NoSQL, ultrarápida y de fácil manejo. En la app, la utilicé para gestionar las sugerencias de búsqueda. Nuevamente, su `mapEventToState()` luce así:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%207.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%207.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%207.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%207.png) -->
 
 En este caso, maneja múltiples eventos, para guardar un nuevo elemento, cargarlos todos o eliminar uno. Notar el tipo `Either` para los resultados del repositorio. Este tipo proviene de la librería _[dartz](https://pub.dev/packages/dartz)_, que permite usar aspectos de programación funcional en Dart. Una técnica muy útil es usar el tipo `Either` para el manejo de errores. En este caso, el repositorio retorna un tipo `Either` cuyo valor izquierdo (`left`) corresponde a un error (sí, debería haber creado una clase específica para los distintos errores y no sólo un `String`) y un lado derecho (`right`) para el resultado esperado.
 
 El último bloc, o mejor dicho _cubit_ (proveniente también de la librería _flutter_bloc_. Más detalles en su [página oficial](https://bloclibrary.dev/#/)), es `ThemeCubit`, que gestiona el cambio entre el tema claro y oscuro de la app.
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%208.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%208.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%208.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%208.png) -->
 
 Como funcionalidad adicional, utilicé _[hydrated_bloc](https://pub.dev/packages/hydrated_bloc)_ para preservar el estado de la aplicación, en concreto, de este cubit, para que el tema seleccionado por el usuario se mantenga aún después de cerrar y volver a abrir la app. Para este tipo de casos, me parece que esta solución es mejor que un cacheo convencional, por ejemplo, con Hive.
 
@@ -160,31 +159,31 @@ DETALLES DEL LIBRO
 
 Una de las partes entretenidas del desarrollo fue mostrar los detalles del libro una vez realizada la búsqueda y seleccionado el ítem de interés para una potencial descarga. Para ello, quise mostrar toda la información disponible, en un formato similar al de Goodreads, donde se muestra en primer lugar la postada, en un fondo llamativo, luego el título, autor(es), descripción y tabla de contenidos. Y al final, una especie de tabla con información adicional relevante, tal como la cantidad de página, el ISBN, el tamaño del archivo, etc.
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608424177.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608424177.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608424177.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608424177.png) -->
 
 Por supuesto, no fue menos trabajoso que cualquier otro aspecto del desarrollo. Pero el resultado fue satisfactorio, o algo así. Este es parte del código:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%209.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%209.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%209.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%209.png) -->
 
 La portada y su fondo son creados con un widget custom llamado `ImageWidgetWithPlaceholder`, que permite mostrar datos por defecto mientras carga la imagen con `NetworkImage`, o seguir mostrándolo si falla la carga. El código de `ImageWidgetWithPlaceholder` es el siguiente:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2010.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2010.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2010.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2010.png) -->
 
 El resultado es la imagen de la portada con un fondo, que es la misma imagen aumentada y con un filtro, que carga de manera suave.
 
 Otro aspecto relevante de la información son la descripción y la tabla de contenidos. En ambos casos, el dato podría no existir o estar en un formato que no es texto puro... De hecho, en general, las descripciones y tablas de contenido son HTML, no siempre bien formado. Por eso, decidí usar una librería para renderizar HTML en Flutter, _[fluter_html](https://pub.dev/packages/flutter_html)._ Funciona bastante bien. No obstante, me encontré con un problama a la hora de querer implementar un pequeño efecto de expansión y colapso del texto al clickear en un botón "ver más/ver menos" (similar a Goodreads). Si bien me fue posible dar con un efecto similar al esperado, no me terminaba de gustar.
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608425650.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608425650.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608425650.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608425650.png) -->
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608425654.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608425654.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608425654.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Screenshot_1608425654.png) -->
 
 Finalmente, encontré otra librería que me pareció más útil para el caso: _[simple_html_css](https://pub.dev/packages/simple_html_css)_. Con ella, y en conjunto con _[expandable](https://pub.dev/packages/expandable)_, logré el efecto deseado. La simbiosis se consiguió gracias a que simple_html_css genera un widget `TextSpan`, que está ideado para ser utilizado dentro del widget `RichText` de Flutter, lo cual es muy conveniente en general y en particular para mi idea.
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2011.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2011.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2011.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2011.png) -->
 
 Debido a peculiaridades de la librería, fue necesario envolver el dato entre dos etiquetas `<div>`. `ExpandableText`, por su parte, se ve así:
 
-![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2012.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2012.png)
+<!-- ![LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2012.png](LibGen%20Mobile%2080b8f837d3df4a2a9d7404891b3cea28/Untitled%2012.png) -->
 
 Aquí ocurren muchas cosas, pero lo relevante es lo siguiente. La combinación de `ExpandableTheme`, `ExpandableThemeData`, `ExpandableNotifier` y `Expandable` (todos provenientes de _expandable_) permite crear un widget expansibl/colapsable custom. En mi caso, quería un párrafo que al exceder las 10 líneas se le aplique un _overflow_ con ellipsis, y apareciera un botón de "ver mas", el cual al clickearlo, muestra el texto completo con una animación fluída. Así, y aunque la librería es bastante flexible al respecto, necesitaba una manera de controlar de validar el máximo de líneas, ya que de lo contrario siempre se mostraría el botón de expansión. Por eso, la función `_didExceedMaxLines()` utiliza un `TextPainter` para emular el renderizado del contenido y detectar si excede el número de líneas definido.
 
