@@ -3,7 +3,7 @@
     <v-app-bar app flat>
       <v-toolbar-title>Manuel Vargas</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
+      <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
         <v-icon>mdi-brightness-4</v-icon>
       </v-btn>
       <v-btn to="/" nuxt text> Blog </v-btn>
