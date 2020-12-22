@@ -50,7 +50,7 @@ export default {
       themes: {
         light: {
           primary: '#3b76ff',
-          secondary: '#FFC43B',
+          secondary: '#ECECEC',
           accent: '#0852FF',
           error: '#FF5252',
           info: '#2196F3',
@@ -60,7 +60,7 @@ export default {
         dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          secondary: '#ECECEC',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
