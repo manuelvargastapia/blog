@@ -1,7 +1,7 @@
 ---
-title: Primera app Flutter
+title: 'Primera app Flutter: Libgen Mobile'
 description: Revisión del proceso de desarrollo de una primera experiencia con Flutter.
-featured: featured.png
+featured: primera_app_flutter.png
 ---
 
 # Primera app Flutter: LibGen Mobile

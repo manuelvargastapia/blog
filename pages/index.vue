@@ -4,7 +4,7 @@
       <nuxt-link :to="article.dir">
         <v-img
           v-if="article.featured"
-          :src="article.dir + '/images/' + article.featured"
+          :src="require(`static/featured_images/${article.featured}`)"
           :alt="article.title"
         ></v-img>
         <h3>{{ article.title }}</h3>
@@ -18,7 +18,7 @@
 export default {
   async asyncData({ $content }) {
     const articles = await $content({ deep: true })
-      .only(['title', 'slug', 'dir'])
+      .only(['title', 'description', 'slug', 'dir', 'featured'])
       .sortBy('createdAt', 'desc')
       .fetch()
     return { articles }
