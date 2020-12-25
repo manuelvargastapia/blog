@@ -11,10 +11,11 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@nuxt/content": "^1.9.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "prismjs": "1.22.0",
+    "vue-notion": "0.2.15"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",
