@@ -29,6 +29,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    // https://github.com/nuxt-community/fontawesome-module -- https://github.com/FortAwesome/vue-fontawesome
+    '@nuxtjs/fontawesome',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
@@ -61,6 +63,9 @@ export default {
           success: colors.green.accent3,
         },
       },
+    },
+    icons: {
+      iconfont: 'faSvg',
     },
   },
 
