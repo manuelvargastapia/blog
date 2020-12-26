@@ -7,7 +7,7 @@
       class="flex-no-wrap justify-space-between"
     >
       <v-responsive max-width="400">
-        <div class="pa-3 secondary rounded-xl">
+        <div class="pa-3 secondary rounded-xl d-none d-md-block">
           <v-img
             v-if="article.featured"
             :src="require(`static/featured_images/${article.featured}`)"
