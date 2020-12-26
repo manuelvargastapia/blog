@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app flat>
+    <v-app-bar app flat absolute color="transparent">
       <v-toolbar-title>Manuel Vargas</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
@@ -19,22 +19,40 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer app padless>
-      <v-card flat tile width="100%" class="lighten-1 text-center d-flex">
+    <v-footer app padless absolute color="transparent">
+      <v-card
+        flat
+        tile
+        width="100%"
+        class="lighten-1 text-center d-flex"
+        color="transparent"
+      >
         <v-card-text>
           {{ new Date().getFullYear() }} — <strong>© Manuel Vargas</strong>
         </v-card-text>
         <v-card-text>
-          <v-btn icon>
+          <v-btn
+            icon
+            href="https://github.com/manuelvargastapia"
+            target="_blank"
+          >
             <font-awesome-icon :icon="faGithub" />
           </v-btn>
-          <v-btn icon>
+          <v-btn
+            icon
+            href="https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/"
+            target="_blank"
+          >
             <font-awesome-icon :icon="faLinkedin" />
           </v-btn>
-          <v-btn icon>
+          <v-btn icon href="https://medium.com/@manueldev" target="_blank">
             <font-awesome-icon :icon="faMedium" />
           </v-btn>
-          <v-btn icon>
+          <v-btn
+            icon
+            href="https://www.instagram.com/manuelvargastapia/"
+            target="_blank"
+          >
             <font-awesome-icon :icon="faInstagram" />
           </v-btn>
         </v-card-text>
