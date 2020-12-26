@@ -4,7 +4,7 @@
       <v-toolbar-title>Manuel Vargas</v-toolbar-title>
       <v-spacer></v-spacer>
       <div class="d-none d-md-block">
-        <v-container v-for="align in alignments" :key="align">
+        <v-container>
           <v-row align="center">
             <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
               <v-icon>mdi-brightness-4</v-icon>
@@ -41,54 +41,73 @@
         </v-menu>
       </div>
     </v-app-bar>
-    <v-main>
+    <v-main class="mb-16">
       <v-container fluid>
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer app padless absolute color="transparent">
-      <v-card
-        flat
-        tile
-        width="100%"
-        class="lighten-1 text-center d-flex"
-        color="transparent"
-      >
-        <v-card-text>
-          {{ new Date().getFullYear() }} — <strong>© Manuel Vargas</strong>
-        </v-card-text>
-        <v-card-text>
-          <v-btn
-            icon
-            href="https://github.com/manuelvargastapia"
-            target="_blank"
-          >
-            <font-awesome-icon :icon="faGithub" />
-          </v-btn>
-          <v-btn
-            icon
-            href="https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/"
-            target="_blank"
-          >
-            <font-awesome-icon :icon="faLinkedin" />
-          </v-btn>
-          <v-btn icon href="https://medium.com/@manueldev" target="_blank">
-            <font-awesome-icon :icon="faMedium" />
-          </v-btn>
-          <v-btn
-            icon
-            href="https://www.instagram.com/manuelvargastapia/"
-            target="_blank"
-          >
-            <font-awesome-icon :icon="faInstagram" />
-          </v-btn>
-        </v-card-text>
-        <v-card-text>
-          <strong>Contáctame</strong>
-          <strong>Privacidad y Términos de uso</strong>
-        </v-card-text>
-      </v-card>
-    </v-footer>
+    <div class="d-none d-sm-block mt-16">
+      <v-footer app padless absolute color="transparent">
+        <v-card
+          flat
+          tile
+          width="100%"
+          class="lighten-1 text-center d-flex"
+          color="transparent"
+        >
+          <v-card-text>
+            <strong>{{ new Date().getFullYear() }} © Manuel Vargas</strong>
+          </v-card-text>
+          <v-card-text>
+            <v-btn
+              v-for="(item, index) in rrssIcons"
+              :key="index"
+              :href="item.href"
+              icon
+              target="_blank"
+            >
+              <font-awesome-icon :icon="item.icon" />
+            </v-btn>
+          </v-card-text>
+          <v-card-text>
+            <strong>Contáctame</strong>
+            <strong>Privacidad y Términos de uso</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
+    </div>
+    <div class="d-sm-none">
+      <v-footer app padless absolute color="transparent">
+        <v-card
+          flat
+          tile
+          width="100%"
+          class="lighten-1 text-center"
+          color="transparent"
+        >
+          <v-card-text>
+            <v-btn
+              v-for="(item, index) in rrssIcons"
+              :key="index"
+              :href="item.href"
+              icon
+              target="_blank"
+            >
+              <font-awesome-icon :icon="item.icon" />
+            </v-btn>
+          </v-card-text>
+          <v-card-text>
+            <strong>Contáctame</strong>
+          </v-card-text>
+          <v-card-text>
+            <strong>Privacidad y Términos de uso</strong>
+          </v-card-text>
+          <v-card-text>
+            {{ new Date().getFullYear() }} — <strong>© Manuel Vargas</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
+    </div>
   </v-app>
 </template>
 
@@ -109,7 +128,24 @@ export default {
         { title: 'Apps', to: 'apps' },
         { title: 'Acerca de', to: 'about' },
       ],
-      alignments: ['center'],
+      rrssIcons: [
+        {
+          icon: this.faGithub,
+          href: 'https://github.com/manuelvargastapia',
+        },
+        {
+          icon: this.faLinkedin,
+          href: 'https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/',
+        },
+        {
+          icon: this.faMedium,
+          href: 'https://medium.com/@manueldev',
+        },
+        {
+          icon: this.faInstagram,
+          href: 'https://www.instagram.com/manuelvargastapia/',
+        },
+      ],
     }
   },
   computed: {
