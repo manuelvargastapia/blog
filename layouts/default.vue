@@ -19,6 +19,56 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer app> </v-footer>
+    <v-footer app padless>
+      <v-card flat tile width="100%" class="lighten-1 text-center d-flex">
+        <v-card-text>
+          {{ new Date().getFullYear() }} — <strong>© Manuel Vargas</strong>
+        </v-card-text>
+        <v-card-text>
+          <v-btn icon>
+            <font-awesome-icon :icon="faGithub" />
+          </v-btn>
+          <v-btn icon>
+            <font-awesome-icon :icon="faLinkedin" />
+          </v-btn>
+          <v-btn icon>
+            <font-awesome-icon :icon="faMedium" />
+          </v-btn>
+          <v-btn icon>
+            <font-awesome-icon :icon="faInstagram" />
+          </v-btn>
+        </v-card-text>
+        <v-card-text>
+          <strong>Contáctame</strong>
+          <strong>Privacidad y Términos de uso</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
   </v-app>
 </template>
+
+<script>
+import {
+  faGithub,
+  faLinkedin,
+  faMedium,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons'
+
+export default {
+  computed: {
+    faGithub() {
+      return faGithub
+    },
+    faLinkedin() {
+      return faLinkedin
+    },
+    faMedium() {
+      return faMedium
+    },
+    faInstagram() {
+      return faInstagram
+    },
+  },
+}
+</script>
