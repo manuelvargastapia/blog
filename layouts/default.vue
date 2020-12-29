@@ -23,19 +23,19 @@ export default {
     return {
       rrssIcons: [
         {
-          icon: this.faGithubAlt,
+          icon: faGithubAlt,
           href: 'https://github.com/manuelvargastapia',
         },
         {
-          icon: this.faGoodreadsG,
+          icon: faGoodreadsG,
           href: 'https://www.goodreads.com/user/show/113995266-manuel',
         },
         {
-          icon: this.faLinkedinIn,
+          icon: faLinkedinIn,
           href: 'https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/',
         },
         {
-          icon: this.faInstagram,
+          icon: faInstagram,
           href: 'https://www.instagram.com/manuelvargastapia/',
         },
       ],
@@ -44,24 +44,8 @@ export default {
         { title: 'Apps', to: 'apps' },
         { title: 'Acerca de', to: 'about' },
       ],
+      faBars,
     }
-  },
-  computed: {
-    faGithubAlt() {
-      return faGithubAlt
-    },
-    faLinkedinIn() {
-      return faLinkedinIn
-    },
-    faGoodreadsG() {
-      return faGoodreadsG
-    },
-    faInstagram() {
-      return faInstagram
-    },
-    faBars() {
-      return faBars
-    },
   },
 }
 </script>
