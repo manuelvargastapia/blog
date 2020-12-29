@@ -10,7 +10,7 @@
           color="transparent"
         >
           <v-card-text>
-            <strong>{{ new Date().getFullYear() }} © Manuel Vargas</strong>
+            <strong>© {{ new Date().getFullYear() }} Manuel Vargas</strong>
           </v-card-text>
           <v-card-text>
             <v-btn
@@ -68,51 +68,11 @@
 </template>
 
 <script>
-import {
-  faGithubAlt,
-  faLinkedinIn,
-  faGoodreadsG,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 export default {
-  data() {
-    return {
-      rrssIcons: [
-        {
-          icon: this.faGithubAlt,
-          href: 'https://github.com/manuelvargastapia',
-        },
-        {
-          icon: this.faGoodreadsG,
-          href: 'https://www.goodreads.com/user/show/113995266-manuel',
-        },
-        {
-          icon: this.faLinkedinIn,
-          href: 'https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/',
-        },
-        {
-          icon: this.faInstagram,
-          href: 'https://www.instagram.com/manuelvargastapia/',
-        },
-      ],
-    }
-  },
-  computed: {
-    faGithubAlt() {
-      return faGithubAlt
-    },
-    faLinkedinIn() {
-      return faLinkedinIn
-    },
-    faGoodreadsG() {
-      return faGoodreadsG
-    },
-    faInstagram() {
-      return faInstagram
-    },
-    faBars() {
-      return faBars
+  props: {
+    rrssIcons: {
+      type: [Array],
+      required: true,
     },
   },
 }

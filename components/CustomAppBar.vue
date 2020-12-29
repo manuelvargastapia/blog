@@ -44,14 +44,15 @@
 
 <script>
 export default {
-  data() {
-    return {
-      navItems: [
-        { title: 'Blog', to: '/' },
-        { title: 'Apps', to: 'apps' },
-        { title: 'Acerca de', to: 'about' },
-      ],
-    }
+  props: {
+    faBars: {
+      type: [Object],
+      required: true,
+    },
+    navItems: {
+      type: [Array],
+      required: true,
+    },
   },
 }
 </script>
