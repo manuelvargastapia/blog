@@ -11,37 +11,38 @@
           class="rounded-image"
           min-width="100"
           contain
-        ></v-img>
+        />
       </div>
       <v-container fluid>
         <v-card-title class="headline" v-text="app.name"> </v-card-title>
         <v-card-subtitle v-text="app.preview"> </v-card-subtitle>
-        <v-row>
+        <v-row class="my-6">
           <v-col align="center">
-            <v-btn v-if="app.repo" :href="app.repo" target="_blank" text>
-              <v-card-text>Repositorio</v-card-text>
-            </v-btn>
             <v-btn
-              v-if="app.download"
-              :href="app.download"
+              v-if="app.download_link"
+              :href="app.download_link"
               target="_blank"
               text
             >
-              <v-card-text>Descarga</v-card-text>
+              <v-img
+                v-if="app.download_badge"
+                :src="app.download_badge"
+                max-width="300"
+              />
+              <v-card-text v-else>Descarga</v-card-text>
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col align="start">
+            <v-btn v-if="app.repo" :href="app.repo" target="_blank" text>
+              <v-card-text>Repositorio</v-card-text>
             </v-btn>
             <nuxt-link v-if="app.article_slug" :to="app.article_slug">
               <v-btn text>
                 <v-card-text>Artículo</v-card-text>
               </v-btn>
             </nuxt-link>
-            <v-btn
-              v-if="app.reference"
-              :href="app.reference"
-              target="_blank"
-              text
-            >
-              <v-card-text>Referencia</v-card-text>
-            </v-btn>
           </v-col>
         </v-row>
         <v-card-actions>
