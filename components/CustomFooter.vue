@@ -19,8 +19,9 @@
               :href="item.href"
               icon
               target="_blank"
+              class="mx-3"
             >
-              <font-awesome-icon :icon="item.icon" />
+              <font-awesome-icon :icon="item.icon" size="2x" />
             </v-btn>
           </v-card-text>
           <v-card-text>
@@ -46,8 +47,9 @@
               :href="item.href"
               icon
               target="_blank"
+              class="mx-3"
             >
-              <font-awesome-icon :icon="item.icon" />
+              <font-awesome-icon :icon="item.icon" size="2x" />
             </v-btn>
           </v-card-text>
           <v-card-text>
@@ -67,9 +69,9 @@
 
 <script>
 import {
-  faGithub,
-  faLinkedin,
-  faMedium,
+  faGithubAlt,
+  faLinkedinIn,
+  faGoodreadsG,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -78,16 +80,16 @@ export default {
     return {
       rrssIcons: [
         {
-          icon: this.faGithub,
+          icon: this.faGithubAlt,
           href: 'https://github.com/manuelvargastapia',
         },
         {
-          icon: this.faLinkedin,
-          href: 'https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/',
+          icon: this.faGoodreadsG,
+          href: 'https://www.goodreads.com/user/show/113995266-manuel',
         },
         {
-          icon: this.faMedium,
-          href: 'https://medium.com/@manueldev',
+          icon: this.faLinkedinIn,
+          href: 'https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/',
         },
         {
           icon: this.faInstagram,
@@ -97,14 +99,14 @@ export default {
     }
   },
   computed: {
-    faGithub() {
-      return faGithub
+    faGithubAlt() {
+      return faGithubAlt
     },
-    faLinkedin() {
-      return faLinkedin
+    faLinkedinIn() {
+      return faLinkedinIn
     },
-    faMedium() {
-      return faMedium
+    faGoodreadsG() {
+      return faGoodreadsG
     },
     faInstagram() {
       return faInstagram
