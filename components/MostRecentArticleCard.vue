@@ -1,13 +1,13 @@
 <template>
   <div class="mb-14">
-    <v-card class="mx auto" max-width="1080" max-height="500" elevation="0">
+    <v-card class="mx auto" max-width="800" max-height="400" elevation="0">
     </v-card>
     <div
       :class="{ 'd-flex': $vuetify.breakpoint.lg }"
       class="flex-no-wrap justify-space-between"
     >
-      <v-responsive max-width="600">
-        <div class="pa-6 secondary rounded-xl">
+      <v-responsive max-width="500">
+        <div class="pa-3 secondary rounded-xl">
           <v-img
             v-if="article.featured"
             :src="require(`static/featured_images/${article.featured}`)"

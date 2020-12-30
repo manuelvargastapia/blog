@@ -1,15 +1,13 @@
 <template>
   <div>
-    <v-card class="mx auto" max-width="1080" max-height="500" elevation="0">
-    </v-card>
-    <v-responsive max-width="1080">
+    <v-card class="mx auto" max-width="800" elevation="0"> </v-card>
+    <v-responsive max-width="800">
       <div class="pa-3 secondary rounded-xl">
         <v-img
           v-if="app.featured"
           :src="require(`static/featured_images/${app.featured}`)"
           :alt="app.name"
           class="rounded-image"
-          min-width="100"
           contain
         />
       </div>
