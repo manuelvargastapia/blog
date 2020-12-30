@@ -13,6 +13,20 @@
       <v-container fluid>
         <v-card-title class="headline" v-text="app.name"> </v-card-title>
         <v-card-subtitle v-text="app.preview"> </v-card-subtitle>
+        <v-row>
+          <v-col align="start">
+            <v-btn v-if="app.repo" :href="app.repo" target="_blank" text>
+              <font-awesome-icon :icon="faGithub" size="2x" />
+              <v-card-text>Repositorio</v-card-text>
+            </v-btn>
+            <nuxt-link v-if="app.article_slug" :to="app.article_slug">
+              <v-btn text>
+                <font-awesome-icon :icon="faBookOpen" size="2x" />
+                <v-card-text>Artículo</v-card-text>
+              </v-btn>
+            </nuxt-link>
+          </v-col>
+        </v-row>
         <v-row class="my-6">
           <v-col align="center">
             <v-btn
@@ -28,18 +42,6 @@
               />
               <v-card-text v-else>Descarga</v-card-text>
             </v-btn>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col align="start">
-            <v-btn v-if="app.repo" :href="app.repo" target="_blank" text>
-              <v-card-text>Repositorio</v-card-text>
-            </v-btn>
-            <nuxt-link v-if="app.article_slug" :to="app.article_slug">
-              <v-btn text>
-                <v-card-text>Artículo</v-card-text>
-              </v-btn>
-            </nuxt-link>
           </v-col>
         </v-row>
         <v-card-actions>
@@ -66,12 +68,17 @@
 </template>
 
 <script>
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 export default {
   props: {
     app: {
       type: [Object],
       required: true,
     },
+  },
+  data() {
+    return { faGithub, faBookOpen }
   },
 }
 </script>
