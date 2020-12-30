@@ -43,15 +43,22 @@
           </v-col>
         </v-row>
         <v-card-actions>
-          <v-btn icon>
-            <v-icon>mdi-heart-outline</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>mdi-comment-outline</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>mdi-share-variant-outline</v-icon>
-          </v-btn>
+          <v-row justify="space-between" align="center">
+            <div>
+              <v-btn icon>
+                <v-icon>mdi-heart-outline</v-icon>
+              </v-btn>
+              <v-btn icon>
+                <v-icon>mdi-comment-outline</v-icon>
+              </v-btn>
+              <v-btn icon>
+                <v-icon>mdi-share-variant-outline</v-icon>
+              </v-btn>
+            </div>
+            <div>
+              <v-card-text v-text="app.date" />
+            </div>
+          </v-row>
         </v-card-actions>
       </v-container>
     </v-responsive>
