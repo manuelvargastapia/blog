@@ -26,7 +26,6 @@
           </v-card-text>
           <v-card-text>
             <strong>Contáctame</strong>
-            <strong>Privacidad y Términos de uso</strong>
           </v-card-text>
         </v-card>
       </v-footer>
@@ -54,9 +53,6 @@
           </v-card-text>
           <v-card-text>
             <strong>Contáctame</strong>
-          </v-card-text>
-          <v-card-text>
-            <strong>Privacidad y Términos de uso</strong>
           </v-card-text>
           <v-card-text>
             {{ new Date().getFullYear() }} — <strong>© Manuel Vargas</strong>
