@@ -24,21 +24,15 @@
         </nuxt-link>
         <v-card-subtitle v-text="article.preview"> </v-card-subtitle>
         <v-card-actions>
-          <v-card-action>
-            <v-btn icon>
-              <v-icon>mdi-heart-outline</v-icon>
-            </v-btn>
-          </v-card-action>
-          <v-card-action>
-            <v-btn icon>
-              <v-icon>mdi-comment-outline</v-icon>
-            </v-btn>
-          </v-card-action>
-          <v-card-action>
-            <v-btn icon>
-              <v-icon>mdi-share-variant-outline</v-icon>
-            </v-btn>
-          </v-card-action>
+          <v-btn icon>
+            <v-icon>mdi-heart-outline</v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon>mdi-comment-outline</v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon>mdi-share-variant-outline</v-icon>
+          </v-btn>
         </v-card-actions>
       </v-container>
     </div>
