@@ -1,5 +1,5 @@
 <template>
-  <NotionRenderer
+  <notion-renderer
     :block-map="blockMap"
     :page-link-options="pageLinkOptions"
     full-page
@@ -41,4 +41,8 @@ export default {
 
 <style>
 @import 'vue-notion/src/styles.css';
+
+.notion {
+  color: rgb(255, 255, 255);
+}
 </style>
