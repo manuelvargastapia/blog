@@ -1,12 +1,13 @@
 <template>
   <div class="mb-14">
-    <v-card class="mx auto" max-width="800" max-height="400" elevation="0">
-    </v-card>
-    <div
+    <v-card
       :class="{ 'd-flex': $vuetify.breakpoint.lg }"
-      class="flex-no-wrap justify-space-between"
+      class="mx auto justify-space-between align-center px-4"
+      max-width="800"
+      max-height="400"
+      elevation="0"
     >
-      <v-responsive max-width="500">
+      <v-responsive max-width="400">
         <div class="pa-3 secondary rounded-xl">
           <v-img
             v-if="article.featured"
@@ -42,7 +43,7 @@
           </v-row>
         </v-card-actions>
       </v-container>
-    </div>
+    </v-card>
   </div>
 </template>
 

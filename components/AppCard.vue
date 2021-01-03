@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx auto" max-width="800" elevation="0">
+  <v-card class="mx auto pa-4" max-width="800" elevation="0">
     <v-responsive max-width="800">
       <div class="pa-3 secondary rounded-xl">
         <v-img
