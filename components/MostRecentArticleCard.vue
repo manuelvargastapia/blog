@@ -1,21 +1,25 @@
 <template>
   <div class="mb-14">
     <v-card
-      :class="{ 'd-flex': $vuetify.breakpoint.lg }"
-      class="mx auto justify-space-between align-center px-4"
+      :class="{
+        'd-flex': $vuetify.breakpoint.lg,
+        'pa-4': $vuetify.breakpoint.mdAndDown,
+        'px-4': $vuetify.breakpoint.lg,
+      }"
+      class="mx auto justify-space-between align-center"
       max-width="800"
-      max-height="400"
+      max-height="500"
       elevation="0"
     >
-      <v-responsive max-width="400">
-        <div class="pa-3 secondary rounded-xl">
+      <v-responsive :max-width="$vuetify.breakpoint.lg ? 400 : 800">
+        <div class="pa-3 secondary rounded">
           <v-img
             v-if="article.featured"
             :src="require(`static/featured_images/${article.featured}`)"
             :alt="article.title"
-            class="rounded-image"
+            class="rounded"
             min-width="200"
-            contain
+            max-width="500"
           ></v-img>
         </div>
       </v-responsive>
@@ -57,9 +61,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.rounded-image {
-  border-radius: 16px;
-}
-</style>
