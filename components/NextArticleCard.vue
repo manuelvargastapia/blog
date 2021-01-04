@@ -6,13 +6,13 @@
       :class="{ 'd-flex': $vuetify.breakpoint.lg }"
       class="flex-no-wrap justify-space-between"
     >
-      <v-responsive max-width="400">
-        <div class="pa-3 secondary rounded-xl d-none d-md-block">
+      <v-responsive :max-width="$vuetify.breakpoint.lg ? 300 : 400">
+        <div class="pa-3 secondary rounded">
           <v-img
             v-if="article.featured"
             :src="require(`static/featured_images/${article.featured}`)"
             :alt="article.title"
-            class="rounded-image"
+            class="rounded"
             min-width="100"
             contain
           ></v-img>
