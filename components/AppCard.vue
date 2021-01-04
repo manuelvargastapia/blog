@@ -1,12 +1,12 @@
 <template>
   <v-card class="mx auto pa-4" max-width="800" elevation="0">
     <v-responsive max-width="800">
-      <div class="pa-3 secondary rounded-xl">
+      <div class="pa-3 secondary rounded">
         <v-img
           v-if="app.featured"
           :src="require(`static/featured_images/${app.featured}`)"
           :alt="app.name"
-          class="rounded-image"
+          class="rounded"
           contain
         />
       </div>
@@ -29,11 +29,10 @@
         </v-row>
         <v-row class="my-6">
           <v-col align="center">
-            <v-btn
+            <a
               v-if="app.download_link"
               :href="app.download_link"
               target="_blank"
-              text
             >
               <v-img
                 v-if="app.download_badge"
@@ -41,7 +40,7 @@
                 max-width="300"
               />
               <v-card-text v-else>Descarga</v-card-text>
-            </v-btn>
+            </a>
           </v-col>
         </v-row>
         <v-card-actions>
