@@ -33,6 +33,8 @@ export default {
     '@nuxtjs/fontawesome',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // https://github.com/janniks/vue-notion
+    'vue-notion/nuxt',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -68,6 +70,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ['vue-notion'],
+    // transpile: ['vue-notion'],
   },
 }
