@@ -10,7 +10,7 @@
           color="transparent"
         >
           <v-card-text>
-            <strong>© {{ new Date().getFullYear() }} Manuel Vargas</strong>
+            <p>© {{ new Date().getFullYear() }} Manuel Vargas</p>
           </v-card-text>
           <v-card-text>
             <v-btn
@@ -61,7 +61,7 @@
             </v-btn>
           </v-card-text>
           <v-card-text>
-            {{ new Date().getFullYear() }} — <strong>© Manuel Vargas</strong>
+            <p>© {{ new Date().getFullYear() }} Manuel Vargas</p>
           </v-card-text>
         </v-card>
       </v-footer>
