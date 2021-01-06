@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx auto" max-width="800" elevation="0">
+  <v-card class="mx-auto" max-width="800" elevation="0" color="#3a3a3a">
     <v-card-title>{{ aboutInfo.title }}</v-card-title>
     <v-card-text>{{ aboutInfo.content }}</v-card-text>
   </v-card>
