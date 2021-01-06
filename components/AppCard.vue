@@ -1,15 +1,13 @@
 <template>
-  <v-card class="mx auto pa-4" max-width="800" elevation="0">
+  <v-card class="mx-auto pa-4" max-width="800" elevation="0" color="#3a3a3a">
     <v-responsive max-width="800">
-      <div class="pa-3 secondary rounded">
-        <v-img
-          v-if="app.featured"
-          :src="require(`static/featured_images/${app.featured}`)"
-          :alt="app.name"
-          class="rounded"
-          contain
-        />
-      </div>
+      <v-img
+        v-if="app.featured"
+        :src="require(`static/featured_images/${app.featured}`)"
+        :alt="app.name"
+        class="rounded"
+        contain
+      />
       <v-container fluid>
         <v-card-title class="headline" v-text="app.name"> </v-card-title>
         <v-card-subtitle v-text="app.preview"> </v-card-subtitle>
