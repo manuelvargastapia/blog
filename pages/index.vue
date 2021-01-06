@@ -11,9 +11,7 @@ export default {
       '1c810a1cdb3a497f83e4bdc779e2377e',
       'https://notion-cloudflare-worker.manuelvargastapia.workers.dev/v1'
     )
-    const articles = pageTable
-      .filter((page) => page.published)
-      .sort((a, b) => a.date - b.date)
+    const articles = pageTable.filter((page) => page.published).reverse()
     return { articles }
   },
 }
