@@ -10,18 +10,17 @@
       max-width="800"
       max-height="500"
       elevation="0"
+      color="#3a3a3a"
     >
       <v-responsive :max-width="$vuetify.breakpoint.lg ? 400 : 800">
-        <div class="pa-3 secondary rounded">
-          <v-img
-            v-if="article.featured"
-            :src="require(`static/featured_images/${article.featured}`)"
-            :alt="article.title"
-            class="rounded"
-            min-width="200"
-            max-width="500"
-          ></v-img>
-        </div>
+        <v-img
+          v-if="article.featured"
+          :src="require(`static/featured_images/${article.featured}`)"
+          :alt="article.title"
+          class="rounded"
+          min-width="200"
+          max-width="500"
+        ></v-img>
       </v-responsive>
       <v-container fluid class="d-flex flex-column justify-center">
         <nuxt-link :to="article.slug">
@@ -61,3 +60,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.v-card__title {
+  word-break: normal;
+}
+</style>
