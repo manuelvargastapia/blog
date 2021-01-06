@@ -17,16 +17,14 @@
         class="flex-no-wrap justify-space-between align-center"
       >
         <v-responsive :max-width="$vuetify.breakpoint.lg ? 250 : 400">
-          <div class="secondary rounded">
-            <v-img
-              v-if="article.featured"
-              :src="require(`static/featured_images/${article.featured}`)"
-              :alt="article.title"
-              class="rounded"
-              min-width="100"
-              contain
-            ></v-img>
-          </div>
+          <v-img
+            v-if="article.featured"
+            :src="require(`static/featured_images/${article.featured}`)"
+            :alt="article.title"
+            class="rounded"
+            min-width="100"
+            contain
+          ></v-img>
         </v-responsive>
         <v-container fluid class="d-flex flex-column justify-center">
           <nuxt-link :to="article.slug">
