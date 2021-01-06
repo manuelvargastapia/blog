@@ -6,7 +6,7 @@
           flat
           tile
           width="100%"
-          class="lighten-1 text-center d-flex"
+          class="text-center d-flex"
           color="transparent"
         >
           <v-card-text>
@@ -25,20 +25,20 @@
             </v-btn>
           </v-card-text>
           <v-card-text>
-            <strong>Contáctame</strong>
+            <v-btn
+              href="mailto:manuelvargastapia@gmail.com"
+              target="_blank"
+              text
+            >
+              <p>Contáctame</p>
+            </v-btn>
           </v-card-text>
         </v-card>
       </v-footer>
     </div>
     <div class="d-sm-none">
       <v-footer app padless absolute color="transparent">
-        <v-card
-          flat
-          tile
-          width="100%"
-          class="lighten-1 text-center"
-          color="transparent"
-        >
+        <v-card flat tile width="100%" class="text-center" color="transparent">
           <v-card-text>
             <v-btn
               v-for="(item, index) in rrssIcons"
@@ -52,7 +52,13 @@
             </v-btn>
           </v-card-text>
           <v-card-text>
-            <strong>Contáctame</strong>
+            <v-btn
+              href="mailto:manuelvargastapia@gmail.com"
+              target="_blank"
+              text
+            >
+              <p>Contáctame</p>
+            </v-btn>
           </v-card-text>
           <v-card-text>
             {{ new Date().getFullYear() }} — <strong>© Manuel Vargas</strong>
