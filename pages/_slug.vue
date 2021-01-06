@@ -3,14 +3,11 @@
     :block-map="blockMap"
     :page-link-options="pageLinkOptions"
     full-page
-    prism
   />
 </template>
 
 <script>
 import { NotionRenderer, getPageBlocks, getPageTable } from 'vue-notion'
-import 'prismjs'
-import 'prismjs/themes/prism.css'
 
 export default {
   components: { NotionRenderer },
@@ -23,7 +20,7 @@ export default {
       (item) => item.published && item.slug === params.slug
     )
     const blockMap = await getPageBlocks(
-      page.source[0],
+      page.id,
       'https://notion-cloudflare-worker.manuelvargastapia.workers.dev/v1'
     )
     if (!blockMap || blockMap.error) {
