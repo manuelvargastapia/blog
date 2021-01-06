@@ -6,12 +6,13 @@
           flat
           tile
           width="100%"
-          class="text-center d-flex"
+          class="text-center d-flex align-center"
           color="transparent"
         >
-          <v-card-text>
-            <p>© {{ new Date().getFullYear() }} Manuel Vargas</p>
-          </v-card-text>
+          <v-card-text
+            style="text-align: start"
+            v-text="`© ${new Date().getFullYear()} Manuel Vargas`"
+          />
           <v-card-text>
             <v-btn
               v-for="(item, index) in rrssIcons"
@@ -24,8 +25,9 @@
               <font-awesome-icon :icon="item.icon" size="2x" />
             </v-btn>
           </v-card-text>
-          <v-card-text>
+          <v-card-text style="text-align: end">
             <v-btn
+              class="body-2"
               href="mailto:manuelvargastapia@gmail.com"
               target="_blank"
               text
@@ -53,6 +55,7 @@
           </v-card-text>
           <v-card-text>
             <v-btn
+              class="body-2"
               href="mailto:manuelvargastapia@gmail.com"
               target="_blank"
               text
@@ -60,9 +63,7 @@
               Contáctame
             </v-btn>
           </v-card-text>
-          <v-card-text>
-            <p>© {{ new Date().getFullYear() }} Manuel Vargas</p>
-          </v-card-text>
+          <v-card-text v-text="`© ${new Date().getFullYear()} Manuel Vargas`" />
         </v-card>
       </v-footer>
     </div>
