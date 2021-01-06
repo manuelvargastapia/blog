@@ -30,7 +30,7 @@
               target="_blank"
               text
             >
-              <p>Contáctame</p>
+              Contáctame
             </v-btn>
           </v-card-text>
         </v-card>
@@ -57,7 +57,7 @@
               target="_blank"
               text
             >
-              <p>Contáctame</p>
+              Contáctame
             </v-btn>
           </v-card-text>
           <v-card-text>
