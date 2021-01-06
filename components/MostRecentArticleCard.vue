@@ -1,12 +1,8 @@
 <template>
   <div class="mb-14">
     <v-card
-      :class="{
-        'd-flex': $vuetify.breakpoint.lg,
-        'pa-4': $vuetify.breakpoint.mdAndDown,
-        'px-4': $vuetify.breakpoint.lg,
-      }"
-      class="mx auto justify-space-between align-center"
+      :class="{ 'd-flex': $vuetify.breakpoint.lg }"
+      class="mx-auto justify-space-between align-center pa-4"
       max-width="800"
       max-height="500"
       elevation="0"
@@ -19,7 +15,8 @@
           :alt="article.title"
           class="rounded"
           min-width="200"
-          max-width="500"
+          max-height="300"
+          cover
         ></v-img>
       </v-responsive>
       <v-container fluid class="d-flex flex-column justify-center">
