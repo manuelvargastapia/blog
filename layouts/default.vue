@@ -35,7 +35,7 @@ export default {
         },
         {
           icon: faEnvelope,
-          href: 'mailto:manuelvargastapia@gmail.com',
+          href: 'mailto:contacto@manuelvargas.dev',
         },
       ],
       navItems: [
