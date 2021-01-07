@@ -2,7 +2,7 @@
   <v-app>
     <custom-app-bar :nav-items="navItems" :fa-bars="faBars"></custom-app-bar>
     <v-main class="mb-16">
-      <v-container fluid>
+      <v-container fluid class="text-justify">
         <nuxt />
       </v-container>
     </v-main>

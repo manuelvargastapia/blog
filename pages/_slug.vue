@@ -1,16 +1,19 @@
 <template>
-  <notion-renderer
-    :block-map="blockMap"
-    :page-link-options="pageLinkOptions"
-    full-page
-    prism
-  />
+  <v-container fluid>
+    <notion-renderer
+      :block-map="blockMap"
+      :page-link-options="pageLinkOptions"
+      full-page
+      prism
+    />
+  </v-container>
 </template>
 
 <script>
 import { NotionRenderer, getPageBlocks, getPageTable } from 'vue-notion'
 import 'prismjs'
 import 'prismjs/themes/prism-okaidia.css'
+// import 'prismjs/components/prism-html'
 import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-json'
 import 'prismjs/components/prism-dart'
@@ -51,5 +54,11 @@ export default {
 .v-application code {
   background: transparent;
   font-size: 90%;
+}
+.notion-title {
+  text-align: left;
+}
+.notion-h2 {
+  text-align: left;
 }
 </style>

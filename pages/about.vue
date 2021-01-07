@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height class="text-justify">
+  <v-container fill-height fluid>
     <v-row justify="center" align="center">
       <v-col cols="auto">
         <v-img
@@ -54,5 +54,11 @@ export default {
 
 .notion {
   color: rgb(255, 255, 255);
+}
+.notion-title {
+  text-align: left;
+}
+.notion-h2 {
+  text-align: left;
 }
 </style>
