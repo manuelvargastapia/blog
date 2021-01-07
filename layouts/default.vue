@@ -15,9 +15,8 @@ import {
   faGithubAlt,
   faLinkedinIn,
   faGoodreadsG,
-  faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 export default {
   data() {
     return {
@@ -35,8 +34,8 @@ export default {
           href: 'https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/',
         },
         {
-          icon: faInstagram,
-          href: 'https://www.instagram.com/manuelvargastapia/',
+          icon: faEnvelope,
+          href: 'mailto:manuelvargastapia@gmail.com',
         },
       ],
       navItems: [
