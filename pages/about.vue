@@ -1,9 +1,25 @@
 <template>
-  <notion-renderer
-    :block-map="blockMap"
-    :page-link-options="pageLinkOptions"
-    full-page
-  />
+  <v-container fill-height class="text-justify">
+    <v-row justify="center" align="center">
+      <v-col cols="auto">
+        <v-img
+          v-if="featured"
+          :src="require(`static/featured_images/${featured}`)"
+          width="200"
+          height="200"
+        />
+      </v-col>
+    </v-row>
+    <v-row justify="center" align="center">
+      <v-col cols="auto">
+        <notion-renderer
+          :block-map="blockMap"
+          :page-link-options="pageLinkOptions"
+          full-page
+        />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -23,7 +39,7 @@ export default {
     if (!blockMap || blockMap.error) {
       return error({ statusCode: 404, message: 'Post not found' })
     }
-    return { blockMap }
+    return { blockMap, featured: pageTable[0].featured }
   },
   data() {
     return {
