@@ -3,11 +3,17 @@
     :block-map="blockMap"
     :page-link-options="pageLinkOptions"
     full-page
+    prism
   />
 </template>
 
 <script>
 import { NotionRenderer, getPageBlocks, getPageTable } from 'vue-notion'
+import 'prismjs'
+import 'prismjs/themes/prism-okaidia.css'
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-dart'
 
 export default {
   components: { NotionRenderer },
@@ -41,5 +47,9 @@ export default {
 
 .notion {
   color: rgb(255, 255, 255);
+}
+.v-application code {
+  background: transparent;
+  font-size: 90%;
 }
 </style>
