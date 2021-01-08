@@ -1,6 +1,14 @@
 <template>
   <v-app-bar app flat absolute color="transparent">
-    <v-toolbar-title>Manuel Vargas</v-toolbar-title>
+    <v-toolbar-title class="d-flex" style="align-items: center">
+      <v-img
+        :src="require('static/logo_dark.svg')"
+        height="34"
+        width="34"
+        class="mr-4"
+      ></v-img>
+      <p style="margin: 0">Manuel Vargas</p>
+    </v-toolbar-title>
     <v-spacer></v-spacer>
     <div class="d-none d-md-block">
       <v-container>
@@ -17,7 +25,7 @@
       <v-menu offset-y>
         <template v-slot:activator="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on">
-            <font-awesome-icon :icon="faBars" />
+            <font-awesome-icon :icon="faBars" size="2x" />
           </v-btn>
         </template>
         <v-list>
