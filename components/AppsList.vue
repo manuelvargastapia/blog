@@ -1,7 +1,7 @@
 <template>
   <v-container fill-height>
-    <v-row justify="center" align="center">
-      <v-col v-for="app in apps" :key="app.title" cols="auto">
+    <v-row v-for="app in apps" :key="app.title" justify="center" align="center">
+      <v-col cols="auto">
         <app-card :app="app"></app-card>
       </v-col>
     </v-row>
