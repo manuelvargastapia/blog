@@ -1,20 +1,22 @@
 <template>
   <v-card
-    :class="{ 'd-flex': $vuetify.breakpoint.lg }"
+    :class="{
+      'd-flex': $vuetify.breakpoint.lgAndUp,
+      'py-4': $vuetify.breakpoint.mdAndDown,
+    }"
     class="mx-auto justify-space-between align-center pa-4"
     max-width="600"
-    max-height="500"
     elevation="0"
     color="#3a3a3a"
   >
-    <v-responsive :max-width="$vuetify.breakpoint.lg ? 250 : 600">
+    <v-responsive :max-width="$vuetify.breakpoint.lgAndUp ? 250 : 600">
       <v-img
         v-if="article.featured"
         :src="require(`static/featured_images/articles/${article.featured}`)"
         :alt="article.title"
         class="rounded"
         min-width="200"
-        max-height="200"
+        max-height="220"
         cover
       ></v-img>
     </v-responsive>
@@ -74,5 +76,9 @@ export default {
 <style>
 .v-card__title {
   word-break: normal;
+}
+.v-responsive__content {
+  height: 220px;
+  width: 400px;
 }
 </style>
