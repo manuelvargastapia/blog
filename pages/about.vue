@@ -1,13 +1,29 @@
 <template>
   <v-container fill-height fluid>
     <v-row justify="center" align="center">
-      <v-col cols="auto">
+      <v-col
+        style="align-items: center"
+        class="d-flex flex-column align-items-center"
+        cols="auto"
+      >
         <v-img
           v-if="featured"
           :src="require(`static/featured_images/about/${featured}`)"
-          width="200"
-          height="200"
+          width="250"
+          height="250"
         />
+        <v-col>
+          <v-btn
+            v-for="(item, index) in rrssIcons"
+            :key="index"
+            :href="item.href"
+            icon
+            target="_blank"
+            class="mx-3 mt-10"
+          >
+            <font-awesome-icon :icon="item.icon" size="2x" />
+          </v-btn>
+        </v-col>
       </v-col>
     </v-row>
     <v-row justify="center" align="center">
@@ -24,6 +40,12 @@
 
 <script>
 import { NotionRenderer, getPageBlocks, getPageTable } from 'vue-notion'
+import {
+  faGithubAlt,
+  faLinkedinIn,
+  faGoodreadsG,
+} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   components: { NotionRenderer },
@@ -44,6 +66,29 @@ export default {
   data() {
     return {
       pageLinkOptions: { components: 'NuxtLink', href: 'to' },
+      rrssIcons: [
+        {
+          icon: faGithubAlt,
+          href: 'https://github.com/manuelvargastapia',
+        },
+        {
+          icon: faGoodreadsG,
+          href: 'https://www.goodreads.com/user/show/113995266-manuel',
+        },
+        {
+          icon: faLinkedinIn,
+          href: 'https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/',
+        },
+        {
+          icon: faEnvelope,
+          href: 'mailto:contacto@manuelvargas.dev',
+        },
+      ],
+      navItems: [
+        { title: 'Blog', to: '/' },
+        { title: 'Apps', to: 'apps' },
+        { title: 'Acerca de', to: 'about' },
+      ],
     }
   },
 }
