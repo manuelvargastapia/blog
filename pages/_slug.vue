@@ -62,6 +62,7 @@ export default {
 }
 .v-application code {
   background: transparent;
+  color: #dfc256;
   font-size: 90%;
 }
 .notion-title {
