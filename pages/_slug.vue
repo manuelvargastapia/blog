@@ -1,5 +1,11 @@
 <template>
   <v-container fluid>
+    <v-parallax
+      v-if="featured"
+      :src="require(`static/featured_images/articles/${featured}`)"
+      height="300"
+      width="100%"
+    ></v-parallax>
     <notion-renderer
       :block-map="blockMap"
       :page-link-options="pageLinkOptions"
@@ -13,7 +19,6 @@
 import { NotionRenderer, getPageBlocks, getPageTable } from 'vue-notion'
 import 'prismjs'
 import 'prismjs/themes/prism-okaidia.css'
-// import 'prismjs/components/prism-html'
 import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-json'
 import 'prismjs/components/prism-dart'
@@ -35,7 +40,7 @@ export default {
     if (!blockMap || blockMap.error) {
       return error({ statusCode: 404, message: 'Post not found' })
     }
-    return { blockMap }
+    return { blockMap, featured: page.featured }
   },
   data() {
     return {
