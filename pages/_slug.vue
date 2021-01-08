@@ -4,7 +4,6 @@
       v-if="featured"
       :src="require(`static/featured_images/articles/${featured}`)"
       height="300"
-      width="100%"
     ></v-parallax>
     <v-container fluid>
       <notion-renderer
