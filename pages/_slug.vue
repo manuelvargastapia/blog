@@ -1,18 +1,20 @@
 <template>
-  <v-container fluid>
+  <div>
     <v-parallax
       v-if="featured"
       :src="require(`static/featured_images/articles/${featured}`)"
       height="300"
       width="100%"
     ></v-parallax>
-    <notion-renderer
-      :block-map="blockMap"
-      :page-link-options="pageLinkOptions"
-      full-page
-      prism
-    />
-  </v-container>
+    <v-container fluid>
+      <notion-renderer
+        :block-map="blockMap"
+        :page-link-options="pageLinkOptions"
+        full-page
+        prism
+      />
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -55,6 +57,8 @@ export default {
 
 .notion {
   color: rgb(255, 255, 255);
+  font-family: -apple-system, Poppins, 'Segoe UI', Helvetica,
+    'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
 }
 .v-application code {
   background: transparent;
@@ -63,11 +67,13 @@ export default {
 .notion-title {
   text-align: left;
 }
+.notion-h1 {
+  text-align: left;
+}
 .notion-h2 {
   text-align: left;
 }
-
-.container {
-  padding: 0;
+.notion-h3 {
+  text-align: left;
 }
 </style>
