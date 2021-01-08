@@ -1,19 +1,20 @@
 <template>
-  <div>
-    <v-parallax
-      v-if="featured"
-      :src="require(`static/featured_images/articles/${featured}`)"
-      height="300"
-    ></v-parallax>
-    <v-container fluid>
-      <notion-renderer
-        :block-map="blockMap"
-        :page-link-options="pageLinkOptions"
-        full-page
-        prism
-      />
-    </v-container>
-  </div>
+  <v-container fill-height fluid>
+    <v-row justify="center" align="center">
+      <v-col cols="auto">
+        <v-img
+          v-if="featured"
+          :src="require(`static/featured_images/articles/${featured}`)"
+        ></v-img>
+        <notion-renderer
+          :block-map="blockMap"
+          :page-link-options="pageLinkOptions"
+          full-page
+          prism
+        />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
