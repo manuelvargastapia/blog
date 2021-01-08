@@ -48,3 +48,15 @@ export default {
   },
 }
 </script>
+
+<style>
+.v-application a {
+  color: #e96262;
+  text-decoration: none;
+}
+.v-application a:hover:not(.v-btn) {
+  color: #a90000;
+  text-decoration-color: #a90000;
+  text-decoration: underline;
+}
+</style>

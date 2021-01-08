@@ -19,7 +19,7 @@
             :href="item.href"
             icon
             target="_blank"
-            class="mx-3 mt-10"
+            class="mx-2 mt-10 pa-6"
           >
             <font-awesome-icon :icon="item.icon" size="2x" />
           </v-btn>

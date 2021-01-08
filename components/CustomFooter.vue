@@ -16,7 +16,7 @@
               :href="item.href"
               icon
               target="_blank"
-              class="mx-3"
+              class="mx-2 pa-6"
             >
               <font-awesome-icon :icon="item.icon" size="2x" />
             </v-btn>
@@ -34,7 +34,7 @@
               :href="item.href"
               icon
               target="_blank"
-              class="mx-3"
+              class="mx-2 pa-6"
             >
               <font-awesome-icon :icon="item.icon" size="2x" />
             </v-btn>

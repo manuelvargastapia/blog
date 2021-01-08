@@ -30,11 +30,11 @@
         </template>
         <v-list>
           <v-list-item v-for="(item, index) in navItems" :key="index">
-            <v-list-item-title
-              ><v-btn :to="item.to" nuxt text>
+            <v-list-item-title>
+              <v-btn :to="item.to" nuxt text>
                 {{ item.title }}
-              </v-btn></v-list-item-title
-            >
+              </v-btn>
+            </v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
