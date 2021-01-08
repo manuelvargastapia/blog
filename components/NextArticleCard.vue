@@ -10,7 +10,7 @@
     <v-responsive :max-width="$vuetify.breakpoint.lg ? 250 : 600">
       <v-img
         v-if="article.featured"
-        :src="require(`static/featured_images/${article.featured}`)"
+        :src="require(`static/featured_images/articles/${article.featured}`)"
         :alt="article.title"
         class="rounded"
         min-width="200"

@@ -3,7 +3,7 @@
     <v-responsive max-width="800">
       <v-img
         v-if="app.featured"
-        :src="require(`static/featured_images/${app.featured}`)"
+        :src="require(`static/featured_images/apps/${app.featured}`)"
         :alt="app.name"
         class="rounded"
         contain

@@ -4,7 +4,7 @@
       <v-col cols="auto">
         <v-img
           v-if="featured"
-          :src="require(`static/featured_images/${featured}`)"
+          :src="require(`static/featured_images/about/${featured}`)"
           width="200"
           height="200"
         />
