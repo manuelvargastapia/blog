@@ -66,4 +66,8 @@ export default {
 .notion-h2 {
   text-align: left;
 }
+
+.container {
+  padding: 0;
+}
 </style>
