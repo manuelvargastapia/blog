@@ -1,14 +1,16 @@
 <template>
   <v-app-bar app flat absolute color="transparent">
-    <v-toolbar-title class="d-flex" style="align-items: center">
-      <v-img
-        :src="require('static/logo_dark.svg')"
-        height="34"
-        width="34"
-        class="mr-4"
-      ></v-img>
-      <p style="margin: 0">Manuel Vargas</p>
-    </v-toolbar-title>
+    <nuxt-link to="/">
+      <v-toolbar-title class="d-flex" style="align-items: center">
+        <v-img
+          :src="require('static/logo_dark.svg')"
+          height="34"
+          width="34"
+          class="mr-4"
+        ></v-img>
+        <p style="margin: 0">Manuel Vargas</p>
+      </v-toolbar-title>
+    </nuxt-link>
     <v-spacer></v-spacer>
     <div class="d-none d-md-block">
       <v-container>
@@ -56,3 +58,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.v-application p {
+  color: #ffffff !important;
+}
+</style>
