@@ -75,9 +75,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.v-application a:hover {
-  text-decoration: none !important;
-}
-</style>
