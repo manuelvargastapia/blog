@@ -50,8 +50,8 @@ export default {
 </script>
 
 <style>
-.v-application a {
-  color: #e96262;
+.v-application a:not(.v-btn) {
+  color: #e96262 !important;
   text-decoration: none;
 }
 .v-application a:hover:not(.v-btn) {
