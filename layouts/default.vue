@@ -55,8 +55,7 @@ export default {
   text-decoration: none;
 }
 .v-application a:hover:not(.v-btn) {
-  color: #a90000;
-  text-decoration-color: #a90000;
-  text-decoration: underline;
+  color: #a90000 !important;
+  text-decoration: none;
 }
 </style>
