@@ -42,7 +42,7 @@
 import { NotionRenderer, getPageBlocks, getPageTable } from 'vue-notion'
 import {
   faGithubAlt,
-  faLinkedinIn,
+  faRedditAlien,
   faGoodreadsG,
 } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -76,8 +76,8 @@ export default {
           href: 'https://www.goodreads.com/user/show/113995266-manuel',
         },
         {
-          icon: faLinkedinIn,
-          href: 'https://www.linkedin.com/in/manuel-vargas-tapia-6ba3351a5/',
+          icon: faRedditAlien,
+          href: 'https://www.reddit.com/user/Sea_Inflation_7446',
         },
         {
           icon: faEnvelope,
@@ -105,5 +105,12 @@ export default {
 }
 .notion-h2 {
   text-align: left;
+}
+.notion-hr {
+  margin: 6px 0px;
+  padding: 0;
+  border-top-width: 1px;
+  border-bottom-width: 0;
+  border-color: #3a3a3a4b !important;
 }
 </style>
