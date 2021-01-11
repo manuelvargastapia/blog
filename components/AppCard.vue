@@ -41,7 +41,8 @@
       <v-card-actions>
         <v-row justify="space-between" align="center">
           <div>
-            <v-btn icon>
+            <!-- TODO: add functionality -->
+            <!-- <v-btn icon>
               <v-icon>mdi-heart-outline</v-icon>
             </v-btn>
             <v-btn icon>
@@ -49,7 +50,7 @@
             </v-btn>
             <v-btn icon>
               <v-icon>mdi-share-variant-outline</v-icon>
-            </v-btn>
+            </v-btn> -->
           </div>
           <div>
             <v-card-text v-text="app.date" />
