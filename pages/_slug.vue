@@ -5,6 +5,7 @@
         <v-img
           v-if="featured"
           :src="require(`static/featured_images/articles/${featured}`)"
+          max-width="708px"
         ></v-img>
         <notion-renderer
           :block-map="blockMap"
@@ -76,5 +77,8 @@ export default {
 }
 .notion-h3 {
   text-align: left;
+}
+.notion-hr {
+  border-color: #3a3a3a4b !important;
 }
 </style>

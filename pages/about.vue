@@ -107,10 +107,6 @@ export default {
   text-align: left;
 }
 .notion-hr {
-  margin: 6px 0px;
-  padding: 0;
-  border-top-width: 1px;
-  border-bottom-width: 0;
   border-color: #3a3a3a4b !important;
 }
 </style>
