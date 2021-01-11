@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
+require('dotenv').config()
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -35,6 +37,8 @@ export default {
     '@nuxtjs/vuetify',
     // https://github.com/janniks/vue-notion
     'vue-notion/nuxt',
+    // https://github.com/nuxt-community/dotenv-module
+    '@nuxtjs/dotenv',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

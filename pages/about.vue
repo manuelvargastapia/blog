@@ -51,12 +51,12 @@ export default {
   components: { NotionRenderer },
   async asyncData({ error }) {
     const pageTable = await getPageTable(
-      '0940a94496fc4adfbb0c73af221ab8b7',
-      'https://notion-cloudflare-worker.manuelvargastapia.workers.dev/v1'
+      process.env.ABOUT_TABLE,
+      process.env.WORKER_URL
     )
     const blockMap = await getPageBlocks(
       pageTable[0].id,
-      'https://notion-cloudflare-worker.manuelvargastapia.workers.dev/v1'
+      process.env.WORKER_URL
     )
     if (!blockMap || blockMap.error) {
       return error({ statusCode: 404, message: 'Post not found' })

@@ -30,16 +30,13 @@ export default {
   components: { NotionRenderer },
   async asyncData({ params, error }) {
     const pageTable = await getPageTable(
-      '1c810a1cdb3a497f83e4bdc779e2377e',
-      'https://notion-cloudflare-worker.manuelvargastapia.workers.dev/v1'
+      process.env.ARTICLES_TABLE,
+      process.env.WORKER_URL
     )
     const page = pageTable.find(
       (item) => item.published && item.slug === params.slug
     )
-    const blockMap = await getPageBlocks(
-      page.id,
-      'https://notion-cloudflare-worker.manuelvargastapia.workers.dev/v1'
-    )
+    const blockMap = await getPageBlocks(page.id, process.env.WORKER_URL)
     if (!blockMap || blockMap.error) {
       return error({ statusCode: 404, message: 'Post not found' })
     }
