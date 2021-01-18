@@ -20,7 +20,7 @@
     "@fortawesome/free-brands-svg-icons": "5.15.1",
     "@fortawesome/free-solid-svg-icons": "5.15.1",
     "@nuxt/types": "^2.14.6",
-    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxt/typescript-build": "^2.0.4",
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
@@ -31,7 +31,7 @@
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.1.2",
     "vue-notion": "0.3.0"
   }
