@@ -11,7 +11,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxt/typescript-runtime": "^2.0.1",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.6",
     "prismjs": "1.23.0"
