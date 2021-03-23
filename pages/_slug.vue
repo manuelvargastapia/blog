@@ -59,7 +59,7 @@ export default {
     'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
 }
 .v-application code {
-  background: transparent;
+  background: transparent !important;
   color: #dfc256;
   font-size: 90%;
 }
